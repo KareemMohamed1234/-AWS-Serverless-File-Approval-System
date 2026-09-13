@@ -136,8 +136,6 @@ js/
 
 The frontend bucket is accessed through CloudFront using **Origin Access Control (OAC)**.
 
-### 📸 Screenshot
-
 ![S3 Frontend Bucket](images/s3 web.PNG)
 
 ---
@@ -170,9 +168,8 @@ approved/
 
 ### 📸 Screenshot
 
-```text
-![S3 File Storage](docs/images/s3-file-storage.png)
-```
+![S3 File Storage](docs/images/s3.PNG)
+![S3 File Storage](docs/images/s31.PNG)
 
 ---
 
