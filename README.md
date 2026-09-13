@@ -46,11 +46,7 @@ The main objectives of this project are:
 
 ### 📸 Architecture Diagram
 
-> **Add your architecture diagram here**
-
-```text
 ![Architecture Diagram](images/arch.png)
-```
 
 ---
 
