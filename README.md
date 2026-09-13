@@ -66,47 +66,6 @@ The main objectives of this project are:
 
 ---
 
-# 📁 Project Structure
-
-```text
-AWS-Serverless-File-Approval-System/
-│
-├── frontend/
-│   ├── index.html
-│   ├── login.html
-│   ├── register.html
-│   ├── user.html
-│   ├── admin.html
-│   │
-│   ├── css/
-│   │   └── style.css
-│   │
-│   └── js/
-│       ├── config.js
-│       └── app.js
-│
-├── lambda/
-│   └──lambda_function.py
-│
-├── images/
-│       ├── arch.png
-│       ├── cognito-user-pool.png
-│       ├── cognito-groups.png
-│       ├── s3-frontend.png
-│       ├── s3-file-storage.png
-│       ├── dynamodb-table.png
-│       ├── sns-topic.png
-│       ├── iam-role.png
-│       ├── lambda.png
-│       ├── api-gateway.png
-│       ├── cloudfront.png
-│       ├── user-dashboard.png
-│       ├── admin-dashboard.png
-│       └── testing.png
-│
-└── README.md
-```
-
 ---
 
 # 🚀 Step-by-Step Implementation
@@ -139,6 +98,59 @@ The frontend bucket is accessed through CloudFront using **Origin Access Control
 ### Screenshot
 
 ![S3 Frontend Bucket](images/s3-web.PNG)
+
+# - Create Amazon CloudFront Distribution
+
+Amazon CloudFront is used as the secure CDN and HTTPS entry point for the frontend application.
+
+The CloudFront distribution uses the private S3 frontend bucket as its origin.
+
+Architecture
+User Browser
+│
+│ HTTPS
+▼
+CloudFront
+│
+│ OAC
+▼
+Private S3 Frontend Bucket
+Configuration
+
+Create a CloudFront Distribution with:
+
+Origin: Frontend S3 Bucket
+Origin Access: Origin Access Control (OAC)
+Viewer Protocol Policy: Redirect HTTP to HTTPS
+Default Root Object: index.html
+S3 Bucket: Private
+Block Public Access: Enabled
+Origin Access Control
+
+Create an OAC:
+
+FileApprovalFrontendOAC
+
+The OAC allows CloudFront to securely access objects inside the private S3 bucket without making the bucket public.
+
+Default Root Object
+
+Set:
+
+index.html
+
+This allows the application to load when users visit the CloudFront domain.
+
+CloudFront URL
+
+After deployment, CloudFront provides a URL similar to:
+
+https://dxxxxxxxxxxxx.cloudfront.net
+
+This URL becomes the public entry point for the frontend application.
+
+📸 Screenshot — Create Distribution
+![CloudFront Distribution](images/cdn.PNG)
 
 ---
 
