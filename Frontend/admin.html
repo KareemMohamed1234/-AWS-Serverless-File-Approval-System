@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            File Approval System
+        </div>
+
+        <div class="nav-links">
+
+            <span id="adminEmail">
+                Loading...
+            </span>
+
+            <span class="admin-badge">
+                ADMIN
+            </span>
+
+            <button
+                onclick="logout()"
+                class="btn-small logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+                <p>
+                    Review and manage pending files.
+                </p>
+
+            </div>
+
+
+            <button
+                onclick="loadPendingFiles()"
+                class="btn-secondary"
+            >
+                Refresh
+            </button>
+
+        </div>
+
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <h3>
+                    Pending Files
+                </h3>
+
+                <p id="pendingCount">
+                    0
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="files-container">
+
+            <h2>
+                Pending Files
+            </h2>
+
+
+            <div id="filesLoading">
+                Loading files...
+            </div>
+
+
+            <div
+                id="filesTableContainer"
+                class="hidden"
+            >
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                File Name
+                            </th>
+
+                            <th>
+                                User Email
+                            </th>
+
+                            <th>
+                                File Type
+                            </th>
+
+                            <th>
+                                Upload Date
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="filesTableBody">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div
+                id="noFiles"
+                class="empty-state hidden"
+            >
+
+                <h3>
+                    No Pending Files
+                </h3>
+
+                <p>
+                    There are currently no files waiting for approval.
+                </p>
+
+            </div>
+
+
+            <p
+                id="adminMessage"
+                class="message"
+            ></p>
+
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.3.12/dist/amazon-cognito-identity.min.js"></script>
+
+    <script src="js/config.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

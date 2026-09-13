@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            File Approval System
+        </div>
+
+        <div class="nav-links">
+
+            <span id="userEmail">
+                Loading...
+            </span>
+
+            <button
+                onclick="logout()"
+                class="btn-small logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <main class="dashboard">
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    User Dashboard
+                </h1>
+
+                <p>
+                    Upload a file for administrator approval.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="upload-card">
+
+            <h2>
+                Upload File
+            </h2>
+
+            <p class="muted">
+                Select a file and submit it for approval.
+            </p>
+
+
+            <form id="uploadForm">
+
+                <label for="fileInput">
+                    Select File
+                </label>
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="btn-primary"
+                    id="uploadButton"
+                >
+                    Upload File
+                </button>
+
+            </form>
+
+
+            <div
+                id="uploadProgress"
+                class="progress-container hidden"
+            >
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressBarFill"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+                <p id="progressText">
+                    Uploading...
+                </p>
+
+            </div>
+
+
+            <p
+                id="uploadMessage"
+                class="message"
+            ></p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h2>
+                How It Works
+            </h2>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <span>1</span>
+
+                    <p>
+                        Select your file.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span>2</span>
+
+                    <p>
+                        The file is uploaded securely to S3.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span>3</span>
+
+                    <p>
+                        The file enters PENDING status.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <span>4</span>
+
+                    <p>
+                        An administrator reviews the file.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.3.12/dist/amazon-cognito-identity.min.js"></script>
+
+    <script src="js/config.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

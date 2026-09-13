@@ -1,0 +1,1011 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7fb,
+            #eaf0f8
+        );
+
+    color: #1f2937;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+
+    height: 70px;
+
+    background: #111827;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+}
+
+
+.logo {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn-primary,
+.btn-secondary,
+.btn-small {
+
+    display: inline-block;
+
+    border: none;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+
+}
+
+
+.btn-primary {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 12px 22px;
+
+}
+
+
+.btn-primary:hover {
+
+    background: #1d4ed8;
+
+}
+
+
+.btn-secondary {
+
+    background: white;
+
+    color: #2563eb;
+
+    border: 1px solid #2563eb;
+
+    padding: 11px 20px;
+
+}
+
+
+.btn-secondary:hover {
+
+    background: #eff6ff;
+
+}
+
+
+.btn-small {
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 8px 15px;
+
+}
+
+
+.logout-btn {
+
+    background: #dc2626;
+
+}
+
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+}
+
+
+.full-width {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+}
+
+
+.hero-content {
+
+    max-width: 750px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero p {
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: #6b7280;
+
+}
+
+
+.hero-buttons {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 25px;
+
+    padding: 60px 8%;
+
+}
+
+
+.feature-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+}
+
+
+.feature-card h3 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.feature-card p {
+
+    color: #6b7280;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   AUTH
+========================================================= */
+
+.auth-page {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+}
+
+
+.auth-container {
+
+    width: 100%;
+
+    max-width: 450px;
+
+    padding: 20px;
+
+}
+
+
+.auth-card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(
+            0,
+            0,
+            0,
+            0.1
+        );
+
+}
+
+
+.auth-card h1 {
+
+    text-align: center;
+
+    margin-bottom: 10px;
+
+}
+
+
+.auth-subtitle {
+
+    text-align: center;
+
+    color: #6b7280;
+
+    margin-bottom: 30px;
+
+}
+
+
+.auth-card label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+}
+
+
+.auth-card input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    outline: none;
+
+}
+
+
+.auth-card input:focus {
+
+    border-color: #2563eb;
+
+}
+
+
+.auth-card button {
+
+    margin-top: 25px;
+
+}
+
+
+.auth-footer {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #6b7280;
+
+}
+
+
+.auth-footer a {
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   MESSAGES
+========================================================= */
+
+.message {
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+}
+
+
+.message:empty {
+
+    display: none;
+
+}
+
+
+.message.success {
+
+    background: #dcfce7;
+
+    color: #166534;
+
+}
+
+
+.message.error {
+
+    background: #fee2e2;
+
+    color: #991b1b;
+
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard {
+
+    width: 90%;
+
+    max-width: 1300px;
+
+    margin: 40px auto;
+
+}
+
+
+.dashboard-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.dashboard-header h1 {
+
+    font-size: 32px;
+
+}
+
+
+.dashboard-header p {
+
+    margin-top: 8px;
+
+    color: #6b7280;
+
+}
+
+
+/* =========================================================
+   UPLOAD CARD
+========================================================= */
+
+.upload-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+    margin-bottom: 30px;
+
+}
+
+
+.upload-card h2 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.muted {
+
+    color: #6b7280;
+
+    margin-bottom: 25px;
+
+}
+
+
+.upload-card label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+}
+
+
+.upload-card input[type="file"] {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 2px dashed #d1d5db;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress-container {
+
+    margin-top: 25px;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 12px;
+
+    background: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-fill {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #2563eb;
+
+    transition: width 0.2s;
+
+}
+
+
+#progressText {
+
+    margin-top: 10px;
+
+    color: #6b7280;
+
+}
+
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+.info-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+}
+
+
+.steps {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+}
+
+
+.step {
+
+    text-align: center;
+
+}
+
+
+.step span {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+.admin-badge {
+
+    background: #7c3aed;
+
+    color: white;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.stats {
+
+    display: flex;
+
+    margin-bottom: 30px;
+
+}
+
+
+.stat-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    min-width: 200px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+}
+
+
+.stat-card h3 {
+
+    color: #6b7280;
+
+    margin-bottom: 10px;
+
+}
+
+
+.stat-card p {
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+
+}
+
+
+/* =========================================================
+   FILE TABLE
+========================================================= */
+
+.files-container {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.08
+        );
+
+    overflow-x: auto;
+
+}
+
+
+.files-container h2 {
+
+    margin-bottom: 25px;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+th,
+td {
+
+    padding: 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+
+th {
+
+    background: #f9fafb;
+
+    font-size: 14px;
+
+}
+
+
+td {
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status {
+
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.status.pending {
+
+    background: #fef3c7;
+
+    color: #92400e;
+
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.action-btn {
+
+    border: none;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    color: white;
+
+    margin-right: 5px;
+
+}
+
+
+.action-btn.approve {
+
+    background: #16a34a;
+
+}
+
+
+.action-btn.reject {
+
+    background: #dc2626;
+
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+
+    text-align: center;
+
+    padding: 50px;
+
+    color: #6b7280;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #6b7280;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (
+    max-width: 800px
+) {
+
+    .features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .steps {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+
+    .nav-links {
+
+        gap: 10px;
+
+    }
+
+
+    .dashboard-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+}
+
+
+@media (
+    max-width: 500px
+) {
+
+    .auth-card {
+
+        padding: 25px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+}
