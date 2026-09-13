@@ -168,8 +168,8 @@ approved/
 
 ### 📸 Screenshot
 
-![S3 File Storage](docs/images/s3.PNG)
-![S3 File Storage](docs/images/s31.PNG)
+![S3 File Storage](images/s3.PNG)
+![S3 File Storage](images/s31.PNG)
 
 ---
 
