@@ -915,7 +915,7 @@ The normal user dashboard provides:
 
 ### 📸 Screenshot
 
-![User Dashboard](images/user.PNG)
+![User Dashboard](images/User.PNG)
 
 ---
 
