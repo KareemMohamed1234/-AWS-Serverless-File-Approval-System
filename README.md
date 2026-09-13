@@ -196,9 +196,7 @@ FileApprovalSystemUsers
 
 ### 📸 Screenshot
 
-```text
-![Cognito User Pool](docs/images/cognito-user-pool.png)
-```
+![Cognito User Pool](images/cognito.PNG)
 
 ---
 
@@ -230,9 +228,8 @@ Administrators can:
 
 ### 📸 Screenshot
 
-```text
-![Cognito Groups](docs/images/cognito-groups.png)
-```
+![Cognito Groups](images/groupadmin.PNG)
+![Cognito Groups](images/groupusers.PNG)
 
 ---
 
@@ -254,9 +251,7 @@ The frontend uses the Client ID to communicate with Cognito.
 
 ### 📸 Screenshot
 
-```text
-![Cognito App Client](docs/images/cognito-app-client.png)
-```
+![Cognito App Client](images/Client-app.PNG)
 
 ---
 
@@ -288,9 +283,7 @@ Example:
 
 ### 📸 Screenshot
 
-```text
-![Cognito Users](docs/images/cognito-users.png)
-```
+![Cognito Users](images/Users.PNG)
 
 ---
 
