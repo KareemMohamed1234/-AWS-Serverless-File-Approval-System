@@ -339,9 +339,7 @@ REJECTED
 
 ### 📸 Screenshot
 
-```text
-![DynamoDB Table](docs/images/dynamodb-table.png)
-```
+![DynamoDB Table](images/dynamodb.PNG)
 
 ---
 
@@ -371,9 +369,7 @@ The email subscription must be confirmed.
 
 ### 📸 Screenshot
 
-```text
-![SNS Topic](docs/images/sns-topic.png)
-```
+![SNS Topic](images/SNS.PNG)
 
 ---
 
@@ -423,9 +419,7 @@ The permissions are restricted to the required resources.
 
 ### 📸 Screenshot
 
-```text
-![IAM Role](docs/images/iam-role.png)
-```
+![IAM Role](images/iam-role.PNG)
 
 ---
 
@@ -462,9 +456,7 @@ The Lambda function is responsible for:
 
 ### 📸 Screenshot
 
-```text
-![Lambda Function](docs/images/lambda.png)
-```
+![Lambda Function](images/lambda.png)
 
 ---
 
@@ -488,9 +480,7 @@ This makes the application easier to configure and maintain.
 
 ### 📸 Screenshot
 
-```text
-![Lambda Environment Variables](docs/images/lambda-environment.png)
-```
+![Lambda Environment Variables](images/envir.PNG)
 
 ---
 
@@ -616,9 +606,7 @@ Regional
 
 ### 📸 Screenshot
 
-```text
-![API Gateway](docs/images/api-gateway.png)
-```
+![API Gateway](images/api.PNG)
 
 ---
 
@@ -676,12 +664,6 @@ authorizer
 body
 ```
 
-### 📸 Screenshot
-
-```text
-![Lambda Proxy Integration](docs/images/lambda-proxy.png)
-```
-
 ---
 
 # Step 16 — Create Cognito Authorizer
@@ -712,14 +694,6 @@ Authorization: Bearer JWT
 ```
 
 API Gateway validates the JWT before invoking Lambda.
-
-### 📸 Screenshot
-
-```text
-![Cognito Authorizer](docs/images/cognito-authorizer.png)
-```
-
----
 
 # Step 17 — Protect API Routes
 
@@ -811,9 +785,7 @@ https://dxxxxxxxxxxxx.cloudfront.net
 
 ### 📸 Screenshot
 
-```text
-![CORS Configuration](docs/images/cors.png)
-```
+![CORS Configuration](images/cors.PNG)
 
 ---
 
@@ -843,12 +815,6 @@ GET /prod/admin/files
 POST /prod/admin/files/{fileId}/approve
 
 POST /prod/admin/files/{fileId}/reject
-```
-
-### 📸 Screenshot
-
-```text
-![API Deployment](docs/images/api-deployment.png)
 ```
 
 ---
@@ -898,9 +864,7 @@ After confirmation, the user can log in.
 
 ### 📸 Screenshot
 
-```text
-![Registration Page](docs/images/register-page.png)
-```
+![Registration Page](images/register.PNG)
 
 ---
 
@@ -934,9 +898,7 @@ Users → user.html
 
 ### 📸 Screenshot
 
-```text
-![Login Page](docs/images/login-page.png)
-```
+![Login Page](images/login.PNG)
 
 ---
 
@@ -953,9 +915,7 @@ The normal user dashboard provides:
 
 ### 📸 Screenshot
 
-```text
-![User Dashboard](docs/images/user-dashboard.png)
-```
+![User Dashboard](images/user.PNG)
 
 ---
 
@@ -989,12 +949,6 @@ The complete upload flow is:
 10. SNS → Admin Email
 ```
 
-### 📸 Screenshot
-
-```text
-![File Upload](docs/images/file-upload.png)
-```
-
 ---
 
 # Step 26 — Pending S3 Storage
@@ -1014,9 +968,7 @@ The file remains private.
 
 ### 📸 Screenshot
 
-```text
-![Pending S3 File](docs/images/pending-file.png)
-```
+![Pending S3 File](images/pending.PNG)
 
 ---
 
@@ -1045,9 +997,7 @@ Example:
 
 ### 📸 Screenshot
 
-```text
-![DynamoDB Pending Item](docs/images/dynamodb-pending.png)
-```
+![DynamoDB Pending Item](images/file.PNG)
 
 ---
 
@@ -1069,9 +1019,7 @@ The administrator receives a notification that a new file requires review.
 
 ### 📸 Screenshot
 
-```text
-![Admin Notification](docs/images/admin-notification.png)
-```
+![Admin Notification](images/sns2.png)
 
 ---
 
@@ -1095,9 +1043,7 @@ The Admin Dashboard displays:
 
 ### 📸 Screenshot
 
-```text
-![Admin Dashboard](docs/images/admin-dashboard.png)
-```
+![Admin Dashboard](images/admin.PNG)
 
 ---
 
@@ -1186,9 +1132,7 @@ Lambda
 
 ### 📸 Screenshot
 
-```text
-![Approve File](docs/images/approve-file.png)
-```
+![Approve File](images/approve.PNG)
 
 ---
 
@@ -1206,12 +1150,6 @@ S3
 ```
 
 The original pending object is deleted.
-
-### 📸 Screenshot
-
-```text
-![Approved File](docs/images/approved-file.png)
-```
 
 ---
 
@@ -1262,12 +1200,6 @@ Lambda
         │
         ▼
      REJECTED
-```
-
-### 📸 Screenshot
-
-```text
-![Reject File](docs/images/reject-file.png)
 ```
 
 ---
@@ -1393,255 +1325,6 @@ to validate JWT tokens before allowing protected API requests.
                 ├── pending/
                 │
                 └── approved/
-```
-
----
-
-# 🧪 Testing
-
-## Test 1 — User Registration
-
-Expected result:
-
-```text
-User successfully registered
-Email verification received
-```
-
-### 📸 Screenshot
-
-```text
-![Registration Test](docs/images/test-registration.png)
-```
-
----
-
-## Test 2 — User Login
-
-Expected result:
-
-```text
-Normal User → user.html
-Admin → admin.html
-```
-
-### 📸 Screenshot
-
-```text
-![Login Test](docs/images/test-login.png)
-```
-
----
-
-## Test 3 — File Upload
-
-Expected result:
-
-```text
-File uploaded to:
-
-S3/pending/
-```
-
-### 📸 Screenshot
-
-```text
-![Upload Test](docs/images/test-upload-s3.png)
-```
-
----
-
-## Test 4 — DynamoDB Metadata
-
-Expected result:
-
-```text
-status = PENDING
-```
-
-### 📸 Screenshot
-
-```text
-![DynamoDB Test](docs/images/test-dynamodb.png)
-```
-
----
-
-## Test 5 — Admin Notification
-
-Expected result:
-
-```text
-Admin receives notification
-```
-
-### 📸 Screenshot
-
-```text
-![SNS Test](docs/images/test-sns.png)
-```
-
----
-
-## Test 6 — Admin Dashboard
-
-Expected result:
-
-```text
-Pending file appears in Admin Dashboard
-```
-
-### 📸 Screenshot
-
-```text
-![Admin Dashboard Test](docs/images/test-admin-dashboard.png)
-```
-
----
-
-## Test 7 — Approve File
-
-Expected result:
-
-```text
-pending/
-     ↓
-approved/
-
-DynamoDB:
-PENDING
-   ↓
-APPROVED
-```
-
-### 📸 Screenshot
-
-```text
-![Approval Test](docs/images/test-approve.png)
-```
-
----
-
-## Test 8 — Reject File
-
-Expected result:
-
-```text
-pending/
-     ↓
-Deleted
-
-DynamoDB:
-PENDING
-   ↓
-REJECTED
-```
-
-### 📸 Screenshot
-
-```text
-![Rejection Test](docs/images/test-reject.png)
-```
-
----
-
-## Test 9 — Unauthorized User
-
-A normal user attempts to access:
-
-```text
-GET /admin/files
-```
-
-Expected result:
-
-```text
-403 Forbidden
-```
-
-because the user does not belong to:
-
-```text
-Admins
-```
-
-### 📸 Screenshot
-
-```text
-![Authorization Test](docs/images/test-authorization.png)
-```
-
----
-
-# 📈 Monitoring
-
-AWS CloudWatch is used to monitor Lambda execution.
-
-Important logs include:
-
-```text
-API request
-Authentication
-Authorization
-S3 operations
-DynamoDB operations
-SNS publishing
-Errors
-```
-
-### 📸 Screenshot
-
-```text
-![CloudWatch Logs](docs/images/cloudwatch-logs.png)
-```
-
----
-
-# 🌐 Frontend Deployment
-
-The frontend is deployed using:
-
-```text
-Amazon S3
-       │
-       ▼
-Origin Access Control
-       │
-       ▼
-CloudFront
-       │
-       ▼
-HTTPS
-```
-
-The S3 frontend bucket remains private.
-
-CloudFront retrieves the files using OAC.
-
-### 📸 Screenshot
-
-```text
-![CloudFront Distribution](docs/images/cloudfront.png)
-```
-
----
-
-# 🔐 CloudFront Security
-
-The CloudFront distribution uses:
-
-```text
-HTTPS
-Origin Access Control
-Private S3 Origin
-```
-
-HTTP requests are redirected to HTTPS.
-
-### 📸 Screenshot
-
-```text
-![CloudFront Security](docs/images/cloudfront-security.png)
 ```
 
 ---
