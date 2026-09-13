@@ -456,7 +456,7 @@ The Lambda function is responsible for:
 
 ### 📸 Screenshot
 
-![Lambda Function](images/lambda.png)
+![Lambda Function](images/lambda.PNG)
 
 ---
 
@@ -864,7 +864,7 @@ After confirmation, the user can log in.
 
 ### 📸 Screenshot
 
-![Registration Page](images/register.PNG)
+![Registration Page](images/regeister.PNG)
 
 ---
 
