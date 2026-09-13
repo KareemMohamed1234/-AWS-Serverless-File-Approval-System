@@ -86,12 +86,10 @@ AWS-Serverless-File-Approval-System/
 │       └── app.js
 │
 ├── lambda/
-│   └── file_management/
-│       └── lambda_function.py
+│   └──lambda_function.py
 │
-├── docs/
-│   └── images/
-│       ├── architecture-diagram.png
+├── images/
+│       ├── arch.png
 │       ├── cognito-user-pool.png
 │       ├── cognito-groups.png
 │       ├── s3-frontend.png
@@ -140,9 +138,7 @@ The frontend bucket is accessed through CloudFront using **Origin Access Control
 
 ### 📸 Screenshot
 
-```text
-![S3 Frontend Bucket](docs/images/s3-frontend.png)
-```
+![S3 Frontend Bucket](images/s3 web.PNG)
 
 ---
 
